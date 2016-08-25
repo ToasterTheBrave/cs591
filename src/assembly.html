@@ -1,0 +1,38 @@
+<pre>
+In http://bulkan.upm.edu.ph/~pfalcone/compsci/lang.html,
+Intel x86 AT&T (GNU) Assembly Syntax Basics
+
+Operation Suffixes
+The data type of the instruction operands are dictated to the assembler by operation suffixes. In AT&T syntax, the following suffixes are supported: 
+
+
+    Suffix        Data Type
+    ------        ---------
+       b          byte (8 bits)
+       w          word (16-bits)
+       l          long (32-bits)
+       s          IEEE Single Format (32-bits)
+       d          IEEE Double Format (64-bits)
+
+Examples:
+
+
+       DOS Syntax                     AT&T Syntax
+      ------------                   -------------
+      
+      mov    al,bl                   movb    %bl,%al 
+      mov    ax,bx                   movw    %bx,%ax
+      mov    eax,ecx                 movl    %ecx,%eax
+      mov    eax, DWORD PTR [ebx]    movl    (%ebx),%eax
+
+Use gcc -o movl -ggdb movl.c
+to compile code.
+
+Inside gdb
+Use disassemble main to show the assembly code of main()
+Use x/bx main+n  to display the content of the byte at main+n location
+
+Instruction               Machine Code
+movl $0xb, %eax    -->    b8 0b 00
+movb $0xb, $al     -->    b0 0b c9
+</pre>

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="icon" href="http://www.uccs.edu/icon2.ico" type="image/vnd.microsoft.icon"> 
+<LINK href="combo.css" type=text/css rel=STYLESHEET>
+<style type="text/css">
+  <!--
+        *  { font-family:Verdana, Arial, Helvetica, sans-serif; }
+          }
+            -->
+</style>
+<script>
+function loadIframe(iframeName, url) {
+//showProps( window, "window" );
+//document.writeln( "<br>" );
+
+//showProps( document, "document" );
+//document.writeln( "<br>" );
+    var ifr = document.getElementById('iframe1');
+    ifr.src=url;
+    // document.all.iframe1.style.visibility= "visible";   
+    return false;
+}
+</script>
+<title>Tyler Jared Ruppert CS591 Web page</title>
+</head>
+
+<body background="images/msnBAckground.gif">
+<center>
+<img src="images/pikepeak.jpg" width="960" /> 
+<img src="images/truppert.jpg" style="position: absolute; top: 50px; left: 50%; margin-left: 280px">
+<!-- you can replace truppert.jpg with your image file name here -->
+<iframe id="iframe1" src="home.html" width="960" height="1100"></iframe>
+</center>
+<div id="name1" style="position: absolute; top: 127px; left: 50%; margin-left: -300px; font-size: 48pt; font-family: Arial,Helvetica; font-style: italic; width: 800px; color:gold">
+Tyler Jared Ruppert
+</div>
+<div id="form1" style="position: absolute; top: 200px; left: 50%; margin-left: -200px">
+<form name="menu">
+<input type=button onClick="return loadIframe('iframe1', 'home.html')" value="home" class="redGradient"/>
+<input type=button onClick="return loadIframe('iframe1', 'homework.html')" value="homework" class="greenGradient" />
+<input type=button onClick="return loadIframe('iframe1', 'project.html')" value="semester project" class="cyanGradient" />
+<input type=button onClick="return loadIframe('iframe1', 'resources.html')" value="resources" />
+</form>
+</body>
+</html>
